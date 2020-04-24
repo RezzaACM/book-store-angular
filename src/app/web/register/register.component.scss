@@ -1,0 +1,123 @@
+
+
+
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 250%;
+    margin-top: 20px;
+    color: orange;
+    letter-spacing: 2px;
+  }
+  
+  .body {
+    margin-top: 50px;
+  }
+  
+  .box-regis {
+    width: 80%;
+    min-height: 320px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 35px 45px 35px 45px;
+    -webkit-box-shadow: -1px 1px 21px 1px rgba(240, 240, 240, 1);
+    -moz-box-shadow: -1px 1px 21px 1px rgba(240, 240, 240, 1);
+    box-shadow: -1px 1px 21px 1px rgba(240, 240, 240, 1);
+  }
+  
+  .box-regis .box-regis-head {
+    text-align: center;
+  }
+  
+  .box-regis {
+    .box-regis-head {
+      .link {
+        text-decoration: none;
+        color: orange;
+        font-weight: 400;
+      }
+    }
+  }
+  
+  .box-regis {
+    .box-regis-head {
+      .link:hover {
+        color: orangered;
+      }
+    }
+  }
+  
+  .box-regis {
+    .box-regis-form {
+      .form-row {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  
+  .box-regis {
+    .box-regis-form {
+      .form-row {
+        label {
+          font-size: 14px;
+          margin-bottom: 0px;
+          font-family: 'open-sans', tahoma, sans-serif;
+          text-align: left;
+          color: #B88F82;
+          font-weight: lighter;
+        }
+      }
+    }
+  }
+  
+  .form-control:focus,
+  .form-control:active {
+    box-shadow: none !important;
+    border: 1px solid orange;
+  }
+  
+  .sk {
+    // border: 1px solid black;
+    margin: auto;
+    margin-top: 10px;
+    width: 70%;
+    text-align: center;
+  }
+  
+  .sk {
+    p {
+      font-size: 12px;
+      color: rgb(158, 158, 158);
+    }
+  }
+  
+  .sk {
+    p {
+      span {
+        color: orange;
+        font-size: 13px;
+      }
+    }
+  }
+  
+  .image-illustrator {
+    width: 80%;
+    height: 350px;
+    margin-left: 100px;
+    // border: 1px solid black;
+  }
+  
+  .is-invalid {
+    border: 1px solid red($color: #000000);
+  }
+  
+  
+  @media (max-width: 767.98px) {
+    .image-illustrator {
+      margin: auto;
+    }
+  
+    .box-regis {
+      margin: auto;
+      width: 100%;
+    }
+  }

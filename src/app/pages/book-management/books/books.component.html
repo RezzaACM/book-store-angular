@@ -1,0 +1,79 @@
+<nb-card>
+  <nb-card-header>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Book List</h2>
+      </div>
+      <div class="col-md-6">
+        <button class="btn btn-primary" style="float:right" (click)="create()">Add New Book</button>
+      </div>
+    </div>
+  </nb-card-header>
+  <nb-card-body>
+    <mat-form-field>
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
+    </mat-form-field>
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="#">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
+        <td mat-cell *matCellDef="let element; let i = index">{{i+1}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+        <td mat-cell *matCellDef="let element">{{element.title}}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="publisher">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Publisher </th>
+        <td mat-cell *matCellDef="let element"> {{element.publisher}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="qty">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Qty </th>
+        <td mat-cell *matCellDef="let element"> {{element.qty}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.price | currency:'Rp.'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="update">
+        <th mat-header-cell *matHeaderCellDef> Update </th>
+        <td mat-cell *matCellDef="let element">
+          <button nbTooltip="Update Book {{element.title}}" nbTooltipPlacement="top" class="btn btn-primary"
+            (click)="updateModal(element)">
+            <nb-icon icon="edit-2-outline" [options]="{ animation: { type: 'zoom' } }"></nb-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef> Delete </th>
+        <td mat-cell *matCellDef="let element">
+          <button nbTooltip="Delete Book {{element.title}}" nbTooltipPlacement="top" class="btn btn-danger"
+            (click)="delete(element.id)">
+            <nb-icon icon="trash-2-outline" [options]="{ animation: { type: 'zoom' } }"></nb-icon>
+          </button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </nb-card-body>
+  <nb-card-footer></nb-card-footer>
+</nb-card>

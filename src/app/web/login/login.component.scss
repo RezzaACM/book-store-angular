@@ -1,0 +1,139 @@
+.content-body {
+  width: 70%;
+  min-height: 550px;
+  // border: 1px solid black;
+  margin: auto;
+  position: relative;
+  margin-top: 50px;
+  background-image: url('../../../assets/images/login-illustrator.png');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.content-body {
+  .box-body {
+    float: right;
+    width: 50%;
+    background-color: transparent;
+    min-height: 500px;
+    border-radius: 4px;
+    -webkit-box-shadow: -6px 0px 26px -8px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: -6px 0px 26px -8px rgba(0, 0, 0, 0.20);
+    box-shadow: -6px 0px 26px -8px rgba(0, 0, 0, 0.20);
+    font-family: 'open sans', tahoma, sans-serif;
+    padding: 40px 32px 12px 32px;
+    // border: 1px solid black;
+  }
+}
+
+.box-body-header {
+  position: relative;
+}
+
+.box-body-header {
+  h3 {
+    float: left;
+  }
+}
+
+.box-body-header {
+  a {
+    margin-top: 14px;
+    float: right;
+    font-weight: bold;
+    color: orange;
+    text-decoration: none;
+  }
+}
+
+.box-body-body {
+  margin-top: 90px;
+}
+
+.form-group {
+  label {
+    font-weight: lighter;
+    color: black;
+  }
+}
+
+.form-group {
+  button {
+    height: 50px;
+  }
+}
+
+.form-control:focus,
+.form-control:active {
+  box-shadow: none !important;
+  border: 1px solid orange;
+}
+
+.box-body-footer {
+  p {
+    font-size: 12px;
+
+  }
+}
+
+.login-option {
+  button {
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    background-color: white;
+    box-shadow: -6px 0px 26px -8px rgba(0, 0, 0, 0.20);
+    transition: 0.3s;
+    transition: all;
+  }
+}
+
+.login-option {
+  button:hover {
+    background-color: lightgrey;
+    transition: 0.3s;
+    font-weight: 700;
+    // transition: all;
+    margin-top: -10px;
+  }
+}
+
+.box-body-footer {
+  p {
+    font-size: 13px;
+  }
+}
+
+.box-body-footer {
+  a {
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+    transition: all;
+  }
+}
+
+.box-body-footer {
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .content-body {
+    width: 100%;
+    background-position: center;
+  }
+
+  .content-body {
+    .box-body {
+      float: none;
+      width: 100%;
+    }
+  }
+
+}

@@ -1,0 +1,63 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Book Title</mat-label>
+      <input matInput formControlName="title" placeholder="Ex. Dragon Ball Chapter 2"
+        [ngClass]="{'is-invalid': isSubmitted && f.title.errors}">
+      <mat-error *ngIf="form.controls.title?.errors">
+        <div *ngIf="form.controls.title?.errors.required">
+          Title is required.
+        </div>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Publisher</mat-label>
+      <input matInput formControlName="publisher" placeholder="Ex. Gramedia"
+        [ngClass]="{'is-invalid': isSubmitted && f.title.errors}">
+      <mat-error *ngIf="form.controls.publisher?.errors">
+        <div *ngIf="form.controls.publisher?.errors.required">
+          Publisher is required.
+        </div>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class=" example-full-width">
+      <mat-label>Qty</mat-label>
+      <input type="number" matInput formControlName="qty" placeholder="Ex. 1" min="0" max="10">
+      <mat-error *ngIf="form.controls.qty?.errors">
+        <div *ngIf="form.controls.qty?.errors.required">
+          Quantity is required.
+        </div>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class=" example-full-width">
+      <mat-label>Price</mat-label>
+      <input type="number" matInput formControlName="qty" placeholder="Ex. Rp.9999">
+      <mat-error *ngIf="form.controls.price?.errors">
+        <div *ngIf="form.controls.price?.errors.required">
+          Price is required.
+        </div>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description" placeholder="Ex. lorem ipsum  " rows="10"></textarea>
+      <mat-error *ngIf="form.controls.descrtiption?.errors">
+        <div *ngIf="form.controls.description?.errors.required">
+          Description is required.
+        </div>
+      </mat-error>
+    </mat-form-field>
+
+    <button class="btn btn-danger col-md-3" style="float: left;" (click)="closeModal()">Close</button>
+    <button type="submit" class="btn btn-success col-md-3" style="float: right;"
+      [disabled]="!f.title.valid  || !f.publisher.valid || !f.qty.valid || !f.description.valid" (click)="doAction()">
+      <span *ngIf="isLoading" [nbSpinner]="isLoading" nbSpinnerStatus="success"></span>
+      Sumbit
+    </button>
+
+  </form>
+</div>
