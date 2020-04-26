@@ -8,6 +8,7 @@ import { PhoneMaskDirective } from '../shared/helper/phone-mask.directive';
 import { LoginComponent } from './login/login.component';
 import { HeaderLogoComponent } from './components/header-logo/header-logo.component';
 import { WebRoutingModule } from './web-routing.module';
+import { RequestResetPasswordComponent } from './request-reset-password/request-reset-password.component';
 
 @NgModule({
     imports: [
@@ -22,7 +23,8 @@ import { WebRoutingModule } from './web-routing.module';
         RegisterComponent,
         PhoneMaskDirective,
         LoginComponent,
-        HeaderLogoComponent
+        HeaderLogoComponent,
+        RequestResetPasswordComponent
     ],
     exports: [
         PhoneMaskDirective

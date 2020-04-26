@@ -64,6 +64,40 @@
   }
 }
 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.o-layout {
+  .forgot-pass {
+
+    font-weight: bold;
+    color: orange;
+    text-decoration: none;
+    // display: inline;
+  }
+}
+
+.o-layout {
+  .checkbox {
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+  }
+}
+
+.o-layout {
+  label {
+    // float: left;
+    margin-left: 20px;
+  }
+}
+
+
 .form-control:focus,
 .form-control:active {
   box-shadow: none !important;

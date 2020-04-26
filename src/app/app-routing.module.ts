@@ -11,6 +11,7 @@ import {
 import { patch } from '@nebular/theme';
 import { RegisterComponent } from './web/register/register.component';
 import { LoginComponent } from './web/login/login.component';
+import { RequestResetPasswordComponent } from './web/request-reset-password/request-reset-password.component';
 
 
 export const routes: Routes = [
@@ -30,6 +31,10 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'reset-password',
+    component: RequestResetPasswordComponent
   },
   {
     path: 'auth',

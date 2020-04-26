@@ -16,6 +16,7 @@ export class RestApiService {
     })
   }
 
+  // Api
   public _api = "http://127.0.0.1:8000/api/";
 
   // error handler

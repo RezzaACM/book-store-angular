@@ -16,6 +16,7 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false
+  loading = false;
   userData = {};
 
   constructor(
@@ -46,11 +47,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(): void {
-
-    // this.snackBar.open('Update data has been', 'Success', {
-    //   duration: 2000,
-    // })
-
+    // set input
     this.userData = {
       name: this.f.fullName.value,
       email: this.f.email.value,
@@ -58,8 +55,10 @@ export class RegisterComponent implements OnInit {
       password: this.f.password.value
     }
 
-    this.submitted = true
+    this.loading = true;
+    this.submitted = true;
     if (this.registerForm.invalid) {
+      this.loading = false;
       return;
     }
 
@@ -68,15 +67,14 @@ export class RegisterComponent implements OnInit {
       .subscribe(res => {
         let errorEmail = res['message']
         if (errorEmail === "Email has been using.") {
+          this.loading = false
           this.snackBar.open(errorEmail, 'Warning', {
             duration: 5000
           })
         }
         if (errorEmail === "Success! New Customer Has Been Created") {
-          this.snackBar.open(errorEmail, 'Success', {
-            duration: 3000
-          })
-          this.router.navigate(['/login']);
+          this.loading = false
+          this.router.navigate(['/login', "#success"]);
         }
       })
 

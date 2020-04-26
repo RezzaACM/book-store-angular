@@ -11,7 +11,7 @@
             <div class="box-body">
               <div class="box-body-header">
                 <h3>Masuk</h3>
-                <p><a [routerLink]="['/register']" routerLinkActive="router-link-active">Register</a></p>
+                <p><a routerLink="/register">Register</a></p>
               </div>
 
               <div class="box-body-body">
@@ -21,8 +21,8 @@
                     <input type="email" formControlName="email" class="form-control"
                       [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
                     <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                        <div *ngIf="f.email.errors.required">Email tidak boleh kosong!</div>
-                        <div *ngIf="f.email.errors.email">Email tidak valid!</div>
+                      <div *ngIf="f.email.errors.required">Email tidak boleh kosong!</div>
+                      <div *ngIf="f.email.errors.email">Email tidak valid!</div>
                     </div>
                   </div>
                   <div class="form-group">
@@ -30,13 +30,22 @@
                     <input type="password" formControlName="password" class="form-control"
                       [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
                     <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                        <div *ngIf="f.password.errors.required">Password tidak boleh kosong!</div>
-                        <div *ngIf="f.password.errors.minlength">Password kurang dari 6 karakter!</div>
+                      <div *ngIf="f.password.errors.required">Password tidak boleh kosong!</div>
+                      <div *ngIf="f.password.errors.minlength">Password kurang dari 6 karakter!</div>
+                    </div>
+                  </div>
+                  <div class="o-layout">
+                    <div class="left">
+                      <input type="checkbox" name="" class="checkbox" id="" formControlName="rememberMe" />
+                      <label for="rememberMe">Ingat Saya</label>
+                    </div>
+                    <div class="right">
+                      <p><a class="forgot-pass" routerLink="/reset-password" >Lupa Password?</a></p>
                     </div>
                   </div>
                   <div class="form-group">
                     <button type="submit" class="btn btn-primary col-md-12">
-                      Masuk
+                      Masuk <i class="fa fa-spinner fa-spin" *ngIf="loading"></i>
                     </button>
                   </div>
                 </form>
@@ -48,8 +57,7 @@
                   <button class="col-md-12"><i class="fab fa-google float-left"
                       style="color: green;"></i>Google</button>
                 </div>
-                <p class="text-center mt-2">Belum punya akun myBook? <a [routerLink]="['/register']"
-                    routerLinkActive="router-link-active">Daftar disini</a> </p>
+                <p class="text-center mt-2">Belum punya akun myBook? <a routerLink="/register">Daftar disini</a> </p>
               </div>
 
             </div>
