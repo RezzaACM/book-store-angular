@@ -9,6 +9,9 @@ import { LoginComponent } from './login/login.component';
 import { HeaderLogoComponent } from './components/header-logo/header-logo.component';
 import { WebRoutingModule } from './web-routing.module';
 import { RequestResetPasswordComponent } from './request-reset-password/request-reset-password.component';
+import { SetNewPasswordComponent } from './set-new-password/set-new-password.component';
+import { BoxShadowComponent } from './components/box-shadow/box-shadow.component';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
     imports: [
@@ -24,7 +27,10 @@ import { RequestResetPasswordComponent } from './request-reset-password/request-
         PhoneMaskDirective,
         LoginComponent,
         HeaderLogoComponent,
-        RequestResetPasswordComponent
+        RequestResetPasswordComponent,
+        SetNewPasswordComponent,
+        BoxShadowComponent,
+        IndexComponent
     ],
     exports: [
         PhoneMaskDirective

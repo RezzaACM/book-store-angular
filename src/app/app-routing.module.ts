@@ -12,6 +12,8 @@ import { patch } from '@nebular/theme';
 import { RegisterComponent } from './web/register/register.component';
 import { LoginComponent } from './web/login/login.component';
 import { RequestResetPasswordComponent } from './web/request-reset-password/request-reset-password.component';
+import { SetNewPasswordComponent } from './web/set-new-password/set-new-password.component';
+import { IndexComponent } from './web/index/index.component';
 
 
 export const routes: Routes = [
@@ -33,8 +35,16 @@ export const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'reset-password',
+    path: 'reset-password/new',
     component: RequestResetPasswordComponent
+  },
+  {
+    path: 'reset-password/reset/:token',
+    component: SetNewPasswordComponent
+  },
+  {
+    path: '',
+    component: IndexComponent
   },
   {
     path: 'auth',
@@ -66,7 +76,7 @@ export const routes: Routes = [
       },
     ],
   },
-  { path: '', redirectTo: 'pages', pathMatch: 'full' },
+  { path: '', redirectTo: '/  ', pathMatch: 'full' },
   { path: '**', redirectTo: 'pages' },
 ];
 

@@ -1,0 +1,18 @@
+.my-card {
+  margin: auto;
+  margin-top: 50px;
+  width: 100%;
+  min-height: 350px;
+  padding: 35px 45px 35px 45px;
+  border-radius: 4px;
+  -webkit-box-shadow: -1px 1px 21px 1px rgba(240, 240, 240, 1);
+  -moz-box-shadow: -1px 1px 21px 1px rgba(240, 240, 240, 1);
+  box-shadow: -1px 1px 21px 1px rgba(240, 240, 240, 1);
+}
+
+
+@media (min-width: 769px) {
+  .my-card {
+    width: 376.263px;
+  }
+}
