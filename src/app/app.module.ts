@@ -23,16 +23,12 @@ import {
 } from '@nebular/theme';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { RegisterComponent } from './web/register/register.component';
 import { WebModule } from './web/web.module';
-import { PhoneMaskDirective } from './shared/helper/phone-mask.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    // RegisterComponent,
-    // PhoneMaskDirective
   ],
   imports: [
     BrowserModule,
@@ -54,7 +50,7 @@ import { PhoneMaskDirective } from './shared/helper/phone-mask.directive';
       messageGoogleMapKey: 'AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY',
     }),
     CoreModule.forRoot(),
-    ThemeModule.forRoot()
+    ThemeModule.forRoot(),
   ],
   bootstrap: [AppComponent],
   // exports: [PhoneMaskDirective]
