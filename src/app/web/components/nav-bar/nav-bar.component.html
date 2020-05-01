@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg fixed navbar-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">myBook.co.id</a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup" [ngClass]="{'show': navbarOpen}">
+      <div class="m-auto search">
+        <div class="input-icons">
+          <i class="fas fa-search icon"></i>
+          <input class="input-field" type="text" placeholder="Cari judul buku atau penerbit">
+        </div>
+      </div>
+      <div class="navbar-nav ml-auto">
+        <button class="nav-item nav-link"><i class="fas fa-shopping-cart"></i></button>
+        <span class="line"></span>
+        <a class="nav-item nav-link login" [routerLink]="['/login']">Masuk</a>
+        <a class="nav-item nav-link regis" [routerLink]="['/register']">Daftar</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

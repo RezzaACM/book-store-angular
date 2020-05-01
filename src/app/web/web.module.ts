@@ -12,6 +12,9 @@ import { RequestResetPasswordComponent } from './request-reset-password/request-
 import { SetNewPasswordComponent } from './set-new-password/set-new-password.component';
 import { BoxShadowComponent } from './components/box-shadow/box-shadow.component';
 import { IndexComponent } from './index/index.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
+
 
 @NgModule({
     imports: [
@@ -20,7 +23,7 @@ import { IndexComponent } from './index/index.component';
         ReactiveFormsModule,
         NbLayoutModule,
         MatSnackBarModule,
-        WebRoutingModule
+        WebRoutingModule,
     ],
     declarations: [
         RegisterComponent,
@@ -30,7 +33,9 @@ import { IndexComponent } from './index/index.component';
         RequestResetPasswordComponent,
         SetNewPasswordComponent,
         BoxShadowComponent,
-        IndexComponent
+        IndexComponent,
+        NavBarComponent,
+        SideBarComponent,
     ],
     exports: [
         PhoneMaskDirective
